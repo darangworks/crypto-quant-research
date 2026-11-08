@@ -107,7 +107,7 @@ def main():
         for k, s, e, t in r["windows"]:
             lines.append(f"| {k} | {s} | {e} | {t:.2%} |")
         lines.append("")
-    lines += [f"**Verdict under prereg-v1: {'ACCEPTED' if passes else 'REJECTED'}**", ""]
+    lines += [f"**Verdict under prereg-v2: {'ACCEPTED' if passes else 'REJECTED'}**", ""]
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
@@ -116,6 +116,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
